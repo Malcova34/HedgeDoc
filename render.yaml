@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hedgedoc
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    region: oregon
+    healthCheckPath: /
+    ports:
+      - 3000
