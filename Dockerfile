@@ -1,8 +1,9 @@
-FROM quay.io/hedgedoc/hedgedoc:latest
+FROM writeas/writefreely:latest
 
-ENV CMD_ALLOW_ANONYMOUS=true
-ENV CMD_DB_URL=sqlite:///data/sqlite.db
+ENV WF_ALLOW_PUBLIC=true
+ENV WF_ADMIN_USER=admin
+ENV WF_ADMIN_PASS=adminpass
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["node", "server.js"]
+CMD ["writefreely"]
